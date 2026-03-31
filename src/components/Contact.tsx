@@ -80,20 +80,21 @@ const Contact = () => {
     if (!validateStep(3)) return;
     setIsSubmitting(true);
     try {
-      await emailjs.send(
-        "service_cfpioev",
-        "template_x7lsplb",
-        {
-          firstName: form.firstName,
-          lastName: form.lastName,
-          businessName: form.businessName,
-          email: form.email,
-          phone: form.phone,
-          service: form.service,
-          note: form.note,
-        },
-        "G22_YhLTCKu8Xx9Jq"
-      );
+      const templateParams = {
+        firstName: form.firstName,
+        lastName: form.lastName,
+        businessName: form.businessName,
+        email: form.email,
+        phone: form.phone,
+        service: form.service,
+        note: form.note,
+      };
+
+      // Send notification to you
+      await emailjs.send("service_cfpioev", "template_x7lsplb", templateParams, "G22_YhLTCKu8Xx9Jq");
+
+      // Send auto-reply confirmation to the user
+      await emailjs.send("service_cfpioev", "template_7hf827s", templateParams, "G22_YhLTCKu8Xx9Jq");
       setIsSubmitting(false);
       setIsSubmitted(true);
       setTimeout(() => {
