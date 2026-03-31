@@ -7,6 +7,7 @@ import ecommercePreview from "@/assets/ecommerce-preview.png";
 import emailAutomationPreview from "@/assets/email-automation-preview.png";
 import woocommercePreview from "@/assets/woocommerce-preview.png";
 import metaAdsPreview from "@/assets/meta-ads-preview.png";
+import marketingWebsitePreview from "@/assets/marketing-website-preview.png";
 
 const categories = ["All", "Web App", "Marketing", "SaaS", "E-Commerce"];
 
