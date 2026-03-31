@@ -225,6 +225,23 @@ const Projects = () => {
 
           </motion.div>
         </AnimatePresence>
+
+        {/* View All Projects Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mt-12"
+        >
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:glow-purple transition-all duration-300 hover:scale-105"
+          >
+            View All Projects
+            <ExternalLink size={16} />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
