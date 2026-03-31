@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code, TrendingUp, Megaphone, Database, Rocket } from "lucide-react";
+import { Code, TrendingUp, Megaphone, Database, Rocket, Zap } from "lucide-react";
 
 const services = [
   {
