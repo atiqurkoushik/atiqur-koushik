@@ -27,6 +27,7 @@ const skillCategories = [
     title: "Tools & Platforms",
     color: "from-neon-orange to-neon-purple",
     skills: [
+      { name: "AI Prompt Engineering", level: 92 },
       { name: "Figma", level: 85 },
       { name: "HubSpot", level: 88 },
       { name: "Google Analytics", level: 90 },
