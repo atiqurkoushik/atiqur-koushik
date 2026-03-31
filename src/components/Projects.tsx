@@ -101,61 +101,75 @@ const Projects = () => {
             transition={{ duration: 0.3 }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {filtered.map((project, i) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                className={`glass rounded-2xl p-6 group cursor-pointer hover:${project.color} transition-all duration-500`}
-              >
-                {/* Thumbnail */}
-                <div className="w-full h-40 rounded-xl bg-gradient-to-br from-primary/20 via-secondary to-accent/20 mb-5 flex items-center justify-center overflow-hidden">
-                  {project.image ? (
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top" />
-                  ) : (
-                    <span className="text-4xl font-heading font-bold gradient-text opacity-30 group-hover:opacity-60 transition-opacity">
-                      {project.title.split(" ").map((w) => w[0]).join("")}
-                    </span>
-                  )}
-                </div>
+            {filtered.map((project, i) => {
+              const CardWrapper = ({ children }: { children: React.ReactNode }) =>
+                project.link ? (
+                  <Link to={project.link} className="block">
+                    {children}
+                  </Link>
+                ) : (
+                  <>{children}</>
+                );
 
-                <h3 className="text-lg font-heading font-semibold mb-1 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                {project.subtitle && (
-                  <p className="text-xs text-neon-purple font-mono mb-2">{project.subtitle}</p>
-                )}
-                <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.desc}</p>
+              return (
+                <motion.div
+                  key={project.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.5 }}
+                  whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                  className={`glass rounded-2xl p-6 group cursor-pointer hover:${project.color} transition-all duration-500`}
+                >
+                  <CardWrapper>
+                    {/* Thumbnail */}
+                    <div className="w-full h-40 rounded-xl bg-gradient-to-br from-primary/20 via-secondary to-accent/20 mb-5 flex items-center justify-center overflow-hidden">
+                      {project.image ? (
+                        <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top" />
+                      ) : (
+                        <span className="text-4xl font-heading font-bold gradient-text opacity-30 group-hover:opacity-60 transition-opacity">
+                          {project.title.split(" ").map((w) => w[0]).join("")}
+                        </span>
+                      )}
+                    </div>
 
-                {/* Features */}
-                {project.features && (
-                  <div className="grid grid-cols-2 gap-2 mb-4">
-                    {project.features.map((f) => (
-                      <div key={f.label} className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                        <f.icon size={12} className="text-neon-purple shrink-0" />
-                        <span className="truncate">{f.label}</span>
+                    <h3 className="text-lg font-heading font-semibold mb-1 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    {project.subtitle && (
+                      <p className="text-xs text-neon-purple font-mono mb-2">{project.subtitle}</p>
+                    )}
+                    <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.desc}</p>
+
+                    {/* Features */}
+                    {project.features && (
+                      <div className="grid grid-cols-2 gap-2 mb-4">
+                        {project.features.map((f) => (
+                          <div key={f.label} className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                            <f.icon size={12} className="text-neon-purple shrink-0" />
+                            <span className="truncate">{f.label}</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                )}
+                    )}
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
 
-                <div className="flex gap-3">
-                  <button className="p-2 rounded-lg glass hover:glow-purple transition-all" aria-label="Live demo">
-                    <ExternalLink size={16} />
-                  </button>
-                </div>
-              </motion.div>
+                    <div className="flex gap-3">
+                      <span className="p-2 rounded-lg glass hover:glow-purple transition-all" aria-label="View details">
+                        <ExternalLink size={16} />
+                      </span>
+                    </div>
+                  </CardWrapper>
+                </motion.div>
+              );
+            })}
             ))}
           </motion.div>
         </AnimatePresence>
