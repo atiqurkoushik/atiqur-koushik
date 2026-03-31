@@ -109,15 +109,15 @@ const Certifications = () => {
           </p>
         </motion.div>
 
-        <div className="grid gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {certifications.map((cert, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
-              className="glass rounded-xl p-5 flex items-start gap-4 hover:border-neon-purple/40 transition-all duration-300 group"
+              transition={{ delay: i * 0.06 }}
+              className="glass rounded-xl p-5 flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4 hover:border-neon-purple/40 transition-all duration-300 group"
             >
               <div className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center bg-muted/50">
                 {cert.isGoogle ? (
