@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, Github, Linkedin, Mail, MapPin, ChevronRight, ChevronLeft, Check, User, Building2, AtSign, Phone, Briefcase, MessageSquare, Users, MessageCircle } from "lucide-react";
 
