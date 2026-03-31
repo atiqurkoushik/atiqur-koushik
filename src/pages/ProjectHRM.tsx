@@ -104,6 +104,8 @@ const problems = [
   "Night shift workers had no proper system — clock-ins spanning midnight caused miscalculations.",
   "Payroll processing took 3+ days each month with spreadsheet-based calculations.",
   "No real-time visibility into who was present, late, or absent on any given day.",
+  "Hiring was managed through scattered emails and spreadsheets — no centralized candidate tracking or interview scheduling.",
+  "Sales leads were tracked in personal notebooks and random spreadsheets — no pipeline visibility or follow-up system.",
 ];
 
 const solutions = [
@@ -111,6 +113,8 @@ const solutions = [
   "Implemented smart day-boundary logic that correctly handles 8PM-5AM shifts across midnight.",
   "Automated the entire payroll pipeline — attendance → deductions → salary → payslips in minutes.",
   "Created a live dashboard showing real-time attendance status, late arrivals, and trend analytics.",
+  "Built an end-to-end hiring pipeline — job posting, candidate tracking, interview scheduling, and offer management in one system.",
+  "Integrated a Sales CRM module with lead capture, pipeline stages, follow-up reminders, and revenue forecasting.",
 ];
 
 const challenges = [
@@ -118,6 +122,8 @@ const challenges = [
   "Designing a penalty system (1:3 ratio) that employees perceived as fair and transparent.",
   "Ensuring real-time sync across multiple locations without latency or data conflicts.",
   "Building an audit trail that satisfies both HR compliance and management reporting needs.",
+  "Mapping diverse hiring workflows across departments into a single flexible recruitment pipeline.",
+  "Syncing sales CRM data with HR records to give management a unified view of team performance and revenue.",
 ];
 
 const successPoints = [
@@ -125,6 +131,8 @@ const successPoints = [
   "Eliminated 95% of manual attendance errors and disputes.",
   "Night shift employees reported higher satisfaction with accurate, automated tracking.",
   "HR team reallocated 80% of administrative time to strategic initiatives.",
+  "Cut average time-to-hire by 40% with structured pipeline and automated interview scheduling.",
+  "Sales pipeline visibility increased close rates by 25% and eliminated lost leads.",
 ];
 
 const fadeUp = {
