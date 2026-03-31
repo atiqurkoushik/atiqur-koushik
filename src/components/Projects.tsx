@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Users, Clock, AlertTriangle, DollarSign, Activity, ShoppingCart, Megaphone, Truck, BarChart3, Mail, Flame, Inbox, ListOrdered, CalendarClock, MapPin, Cog, Target, Code, Server, Zap } from "lucide-react";
+import { ExternalLink, Users, Clock, AlertTriangle, DollarSign, Activity, ShoppingCart, Megaphone, Truck, BarChart3, Mail, Flame, Inbox, ListOrdered, CalendarClock, MapPin, Cog, Target, Code, Server, Zap, Globe, MessageCircle, Layout, Smartphone } from "lucide-react";
 import { Link } from "react-router-dom";
 import hrmPreview from "@/assets/hrm-preview.png";
 import ecommercePreview from "@/assets/ecommerce-preview.png";
 import emailAutomationPreview from "@/assets/email-automation-preview.png";
 import woocommercePreview from "@/assets/woocommerce-preview.png";
 import metaAdsPreview from "@/assets/meta-ads-preview.png";
+import marketingWebsitePreview from "@/assets/marketing-website-preview.png";
 
 const categories = ["All", "Web App", "Marketing", "SaaS", "E-Commerce"];
 
@@ -84,6 +85,21 @@ const projects = [
       { icon: Server, label: "Conversions API" },
       { icon: Code, label: "Server-Side Tracking" },
       { icon: Zap, label: "Custom & Offline Events" },
+    ],
+  },
+  {
+    title: "Marketing Website",
+    subtitle: "Custom Website for Marketing Agency",
+    desc: "Customized website for a marketing company with WhatsApp integration, service showcases, portfolio, and responsive static pages built with React & Node.js.",
+    tags: ["React", "Node.js"],
+    category: "Web App",
+    link: "/project/marketing-website",
+    image: marketingWebsitePreview,
+    features: [
+      { icon: Globe, label: "Static Website" },
+      { icon: MessageCircle, label: "WhatsApp Integration" },
+      { icon: Layout, label: "Service Showcase" },
+      { icon: Smartphone, label: "Fully Responsive" },
     ],
   },
   {

@@ -10,6 +10,7 @@ import ProjectEcommerce from "./pages/ProjectEcommerce.tsx";
 import ProjectEmailAutomation from "./pages/ProjectEmailAutomation.tsx";
 import ProjectWoocommerce from "./pages/ProjectWoocommerce.tsx";
 import ProjectMetaAds from "./pages/ProjectMetaAds.tsx";
+import ProjectMarketingWebsite from "./pages/ProjectMarketingWebsite.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/project/email-automation" element={<ProjectEmailAutomation />} />
             <Route path="/project/woocommerce" element={<ProjectWoocommerce />} />
             <Route path="/project/meta-ads" element={<ProjectMetaAds />} />
+            <Route path="/project/marketing-website" element={<ProjectMarketingWebsite />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
