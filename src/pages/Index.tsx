@@ -30,6 +30,7 @@ const Index = () => {
         <Projects />
         <Services />
         <Certifications />
+        <Education />
         <Contact />
       </main>
       <Footer />
