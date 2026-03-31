@@ -102,13 +102,6 @@ const projects = [
       { icon: Smartphone, label: "Fully Responsive" },
     ],
   },
-  {
-    title: "Brand Identity Platform",
-    desc: "Digital brand management platform. Asset library, brand guidelines, and team collaboration tools.",
-    tags: ["Vue.js", "Figma API", "AWS"],
-    category: "SaaS",
-    color: "glow-blue",
-  },
 ];
 
 const Projects = () => {
