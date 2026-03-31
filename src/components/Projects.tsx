@@ -110,17 +110,36 @@ const Projects = () => {
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
                 className={`glass rounded-2xl p-6 group cursor-pointer hover:${project.color} transition-all duration-500`}
               >
-                {/* Placeholder thumbnail */}
+                {/* Thumbnail */}
                 <div className="w-full h-40 rounded-xl bg-gradient-to-br from-primary/20 via-secondary to-accent/20 mb-5 flex items-center justify-center overflow-hidden">
-                  <span className="text-4xl font-heading font-bold gradient-text opacity-30 group-hover:opacity-60 transition-opacity">
-                    {project.title.split(" ").map((w) => w[0]).join("")}
-                  </span>
+                  {project.image ? (
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top" />
+                  ) : (
+                    <span className="text-4xl font-heading font-bold gradient-text opacity-30 group-hover:opacity-60 transition-opacity">
+                      {project.title.split(" ").map((w) => w[0]).join("")}
+                    </span>
+                  )}
                 </div>
 
-                <h3 className="text-lg font-heading font-semibold mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-heading font-semibold mb-1 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
+                {project.subtitle && (
+                  <p className="text-xs text-neon-purple font-mono mb-2">{project.subtitle}</p>
+                )}
                 <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.desc}</p>
+
+                {/* Features */}
+                {project.features && (
+                  <div className="grid grid-cols-2 gap-2 mb-4">
+                    {project.features.map((f) => (
+                      <div key={f.label} className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                        <f.icon size={12} className="text-neon-purple shrink-0" />
+                        <span className="truncate">{f.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
@@ -133,9 +152,6 @@ const Projects = () => {
                 <div className="flex gap-3">
                   <button className="p-2 rounded-lg glass hover:glow-purple transition-all" aria-label="Live demo">
                     <ExternalLink size={16} />
-                  </button>
-                  <button className="p-2 rounded-lg glass hover:glow-blue transition-all" aria-label="Source code">
-                    <Github size={16} />
                   </button>
                 </div>
               </motion.div>
