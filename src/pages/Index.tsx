@@ -30,7 +30,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
