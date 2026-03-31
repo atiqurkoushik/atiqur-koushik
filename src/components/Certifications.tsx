@@ -135,6 +135,10 @@ const Certifications = () => {
                   <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
                     <span className="text-white text-xs font-bold">♥</span>
                   </div>
+                ) : cert.isGovt ? (
+                  <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center">
+                    <span className="text-lg">🏛️</span>
+                  </div>
                 ) : (
                   <Award className="w-6 h-6 text-neon-purple" />
                 )}
