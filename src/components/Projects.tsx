@@ -72,6 +72,21 @@ const projects = [
     ],
   },
   {
+    title: "Meta Ads",
+    subtitle: "Hiring Ads — Special Ads Category",
+    desc: "Meta Ads campaign for hiring employees under Special Ads Category. Reduced cost per form submission with Pixel, Conversions API, server-side tracking, and custom event setup.",
+    tags: ["Meta Ads", "CAPI", "Pixel"],
+    category: "Marketing",
+    link: "/project/meta-ads",
+    image: metaAdsPreview,
+    features: [
+      { icon: Target, label: "Pixel Setup" },
+      { icon: Server, label: "Conversions API" },
+      { icon: Code, label: "Server-Side Tracking" },
+      { icon: Zap, label: "Custom & Offline Events" },
+    ],
+  },
+  {
     title: "Brand Identity Platform",
     desc: "Digital brand management platform. Asset library, brand guidelines, and team collaboration tools.",
     tags: ["Vue.js", "Figma API", "AWS"],
