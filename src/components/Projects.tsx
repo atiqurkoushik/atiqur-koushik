@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Users, Clock, AlertTriangle, DollarSign, Activity } from "lucide-react";
+import { ExternalLink, Users, Clock, AlertTriangle, DollarSign, Activity, ShoppingCart, Megaphone, Truck, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import hrmPreview from "@/assets/hrm-preview.png";
+import ecommercePreview from "@/assets/ecommerce-preview.png";
 
 const categories = ["All", "Web App", "Marketing", "SaaS", "E-Commerce"];
 
