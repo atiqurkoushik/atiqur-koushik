@@ -68,6 +68,13 @@ const certifications = [
     iconBg: "bg-blue-600",
     isMeta: true,
   },
+  {
+    title: "Digital Literacy for Youth",
+    org: "Digital Literacy — Bangladesh Govt.",
+    issued: "Oct 2022",
+    credentialId: "14057849",
+    isGovt: true,
+  },
 ];
 
 const GoogleIcon = () => (
