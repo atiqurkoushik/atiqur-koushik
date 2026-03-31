@@ -40,11 +40,19 @@ const projects = [
     ],
   },
   {
-    title: "Lead Gen Machine",
-    desc: "Automated lead generation system handling 10k+ leads/month. CRM integration with HubSpot and custom scoring.",
-    tags: ["Python", "HubSpot", "APIs"],
+    title: "Email Automation",
+    subtitle: "Cold Email Sending Platform",
+    desc: "Full-featured cold email platform with auto warm-up, unlimited SMTP/IMAP support, master inbox (Unibox), and smart email sequences for outbound campaigns.",
+    tags: ["React", "Node.js", "Supabase"],
     category: "Marketing",
-    color: "glow-orange",
+    link: "/project/email-automation",
+    image: emailAutomationPreview,
+    features: [
+      { icon: Flame, label: "Auto Email Warm-Up" },
+      { icon: Mail, label: "Unlimited SMTP & IMAP" },
+      { icon: Inbox, label: "Unibox - Master Inbox" },
+      { icon: ListOrdered, label: "Email Sequence" },
+    ],
   },
   {
     title: "SaaS Landing Builder",
