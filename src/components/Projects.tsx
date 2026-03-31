@@ -169,8 +169,7 @@ const Projects = () => {
                   </CardWrapper>
                 </motion.div>
               );
-            })}
-            ))}
+            })
           </motion.div>
         </AnimatePresence>
       </div>
