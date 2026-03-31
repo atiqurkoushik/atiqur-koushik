@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Users, Clock, AlertTriangle, DollarSign, Activity, ShoppingCart, Megaphone, Truck, BarChart3, Mail, Flame, Inbox, ListOrdered, CalendarClock, MapPin, Cog } from "lucide-react";
+import { ExternalLink, Users, Clock, AlertTriangle, DollarSign, Activity, ShoppingCart, Megaphone, Truck, BarChart3, Mail, Flame, Inbox, ListOrdered, CalendarClock, MapPin, Cog, Target, Code, Server, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import hrmPreview from "@/assets/hrm-preview.png";
 import ecommercePreview from "@/assets/ecommerce-preview.png";
 import emailAutomationPreview from "@/assets/email-automation-preview.png";
 import woocommercePreview from "@/assets/woocommerce-preview.png";
+import metaAdsPreview from "@/assets/meta-ads-preview.png";
 
 const categories = ["All", "Web App", "Marketing", "SaaS", "E-Commerce"];
 
@@ -68,6 +69,21 @@ const projects = [
       { icon: CalendarClock, label: "Schedule Orders" },
       { icon: MapPin, label: "Location Pages" },
       { icon: Cog, label: "WooCommerce Automation" },
+    ],
+  },
+  {
+    title: "Meta Ads",
+    subtitle: "Hiring Ads — Special Ads Category",
+    desc: "Meta Ads campaign for hiring employees under Special Ads Category. Reduced cost per form submission with Pixel, Conversions API, server-side tracking, and custom event setup.",
+    tags: ["Meta Ads", "CAPI", "Pixel"],
+    category: "Marketing",
+    link: "/project/meta-ads",
+    image: metaAdsPreview,
+    features: [
+      { icon: Target, label: "Pixel Setup" },
+      { icon: Server, label: "Conversions API" },
+      { icon: Code, label: "Server-Side Tracking" },
+      { icon: Zap, label: "Custom & Offline Events" },
     ],
   },
   {
