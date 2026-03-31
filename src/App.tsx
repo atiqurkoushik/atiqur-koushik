@@ -31,6 +31,7 @@ const App = () => (
             <Route path="/project/email-automation" element={<ProjectEmailAutomation />} />
             <Route path="/project/woocommerce" element={<ProjectWoocommerce />} />
             <Route path="/project/meta-ads" element={<ProjectMetaAds />} />
+            <Route path="/project/marketing-website" element={<ProjectMarketingWebsite />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

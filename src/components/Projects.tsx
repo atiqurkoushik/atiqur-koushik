@@ -88,6 +88,21 @@ const projects = [
     ],
   },
   {
+    title: "Marketing Website",
+    subtitle: "Custom Website for Marketing Agency",
+    desc: "Customized website for a marketing company with WhatsApp integration, service showcases, portfolio, and responsive static pages built with React & Node.js.",
+    tags: ["React", "Node.js"],
+    category: "Web App",
+    link: "/project/marketing-website",
+    image: marketingWebsitePreview,
+    features: [
+      { icon: Globe, label: "Static Website" },
+      { icon: MessageCircle, label: "WhatsApp Integration" },
+      { icon: Layout, label: "Service Showcase" },
+      { icon: Smartphone, label: "Fully Responsive" },
+    ],
+  },
+  {
     title: "Brand Identity Platform",
     desc: "Digital brand management platform. Asset library, brand guidelines, and team collaboration tools.",
     tags: ["Vue.js", "Figma API", "AWS"],
