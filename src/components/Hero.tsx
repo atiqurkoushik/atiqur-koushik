@@ -36,7 +36,7 @@ const Hero = () => {
               animate={{ opacity: [1, 0.5, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              dude.
+              man.
             </motion.span>
           </h1>
 
